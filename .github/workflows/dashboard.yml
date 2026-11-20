@@ -1,0 +1,71 @@
+name: Build and publish JEE dashboard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "site/**"
+      - "scripts/**"
+      - "config.json"
+      - ".github/workflows/dashboard.yml"
+  schedule:
+    # Every Friday 15:17 Philippine Standard Time (07:17 UTC). Refreshes the
+    # countdown, overdue and stale flags, and pulls the Google Sheet if linked.
+    - cron: "17 7 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pull action tracker from Google Sheet (optional)
+        if: ${{ vars.ACTIONS_SHEET_CSV_URL != '' }}
+        env:
+          ACTIONS_SHEET_CSV_URL: ${{ vars.ACTIONS_SHEET_CSV_URL }}
+        run: python scripts/sync_sheet.py
+
+      - name: Validate data and build
+        run: python scripts/build.py
+
+      - name: Commit synced tracker
+        if: ${{ vars.ACTIONS_SHEET_CSV_URL != '' }}
+        run: |
+          if ! git diff --quiet -- data/naphs_actions.csv; then
+            git config user.name "jee-dashboard-bot"
+            git config user.email "jee-dashboard-bot@users.noreply.github.com"
+            git add data/naphs_actions.csv
+            git commit -m "Sync action tracker from Google Sheet [skip ci]"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
