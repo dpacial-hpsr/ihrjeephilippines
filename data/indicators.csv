@@ -1,0 +1,57 @@
+indicator,area,technical_area,domain,name,jee_2024,target_2029,target_basis,in_naphs_table
+P1.1,P1,Legal instruments,Prevent,Legal instruments,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P1.2,P1,Legal instruments,Prevent,Gender equity and equality in health emergencies,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+P2.1,P2,Financing,Prevent,Financing for IHR implementation,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P2.2,P2,Financing,Prevent,Financing for public health emergency response,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),no
+P3.1,P3,"IHR coordination, NFP functions and advocacy",Prevent,National IHR Focal Point functions,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P3.2,P3,"IHR coordination, NFP functions and advocacy",Prevent,Multisectoral coordination mechanisms,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P3.3,P3,"IHR coordination, NFP functions and advocacy",Prevent,"Strategic planning for IHR, preparedness or health security",3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P4.1,P4,Antimicrobial resistance,Prevent,Multisectoral coordination on AMR,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+P4.2,P4,Antimicrobial resistance,Prevent,Surveillance of AMR,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+P4.3,P4,Antimicrobial resistance,Prevent,Prevention of MDRO,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P4.4,P4,Antimicrobial resistance,Prevent,Optimal use of antimicrobial medicines in human health,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P4.5,P4,Antimicrobial resistance,Prevent,Optimal use of antimicrobial medicines in animal health and agriculture,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P5.1,P5,Zoonotic diseases,Prevent,Surveillance of zoonotic diseases,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P5.2,P5,Zoonotic diseases,Prevent,Response to zoonotic diseases,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P5.3,P5,Zoonotic diseases,Prevent,Sanitary animal production practices,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P6.1,P6,Food safety,Prevent,Surveillance of foodborne diseases and contamination,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+P6.2,P6,Food safety,Prevent,Response and management of food safety emergencies,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P7.1,P7,Biosafety and biosecurity,Prevent,Whole-of-government biosafety and biosecurity system,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P7.2,P7,Biosafety and biosecurity,Prevent,Biosafety and biosecurity training and practices,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P8.1,P8,Immunization,Prevent,Vaccine coverage (measles) as part of national programme,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P8.2,P8,Immunization,Prevent,National vaccine access and delivery,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+P8.3,P8,Immunization,Prevent,Mass vaccination for epidemics of VPDs,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+D1.1,D1,National laboratory system,Detect,Specimen referral and transport system,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+D1.2,D1,National laboratory system,Detect,Laboratory quality system,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+D1.3,D1,National laboratory system,Detect,Laboratory testing capacity modalities,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+D1.4,D1,National laboratory system,Detect,Effective national diagnostic network,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+D2.1,D2,Surveillance,Detect,Early warning surveillance function,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+D2.2,D2,Surveillance,Detect,Event verification and investigation,3,5,NAPHS D2.2 states the joint LGU simulation exercises aim at score 5,yes
+D2.3,D2,Surveillance,Detect,Analysis and information sharing,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+D3.1,D3,Human resources,Detect,Multisectoral workforce strategy,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+D3.2,D3,Human resources,Detect,Human resources for implementation of IHR,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+D3.3,D3,Human resources,Detect,Workforce training,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+D3.4,D3,Human resources,Detect,Workforce surge during a public health event,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),no
+R1.1,R1,Health emergency management,Respond,Emergency risk assessment and readiness,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+R1.2,R1,Health emergency management,Respond,Public health emergency operations centre (PHEOC),3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+R1.3,R1,Health emergency management,Respond,Management of health emergency response,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+R1.4,R1,Health emergency management,Respond,Activation and coordination of health personnel in a public health emergency,5,5,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+R1.5,R1,Health emergency management,Respond,Emergency logistic and supply chain management,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+R1.6,R1,Health emergency management,Respond,"Research, development and innovation",3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+R2.1,R2,Linking public health and security authorities,Respond,"Public health and security authorities linked during a biological, chemical or radiological event",3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+R3.1,R3,Health services provision,Respond,Case management,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+R3.2,R3,Health services provision,Respond,Utilization of health services,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+R3.3,R3,Health services provision,Respond,Continuity of essential health services,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+R4.1,R4,Infection prevention and control,Respond,IPC programmes,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+R4.2,R4,Infection prevention and control,Respond,HCAI surveillance,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+R4.3,R4,Infection prevention and control,Respond,Safe environment in health facilities,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+R5.1,R5,Risk communication and community engagement,Respond,RCCE systems for emergencies,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+R5.2,R5,Risk communication and community engagement,Respond,Risk communication,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+R5.3,R5,Risk communication and community engagement,Respond,Community engagement,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+PoE1,PoE,Points of entry and border health,"IHR-related hazards, PoE and border health",Core capacity requirements at all times for PoEs,5,5,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+PoE2,PoE,Points of entry and border health,"IHR-related hazards, PoE and border health",Public health response at PoEs,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+PoE3,PoE,Points of entry and border health,"IHR-related hazards, PoE and border health",Risk-based approach to international travel-related measures,4,4,Default: hold the current level (raise to 5 only where the NAPHS Steering Committee sets it),yes
+CE1,CE,Chemical events,"IHR-related hazards, PoE and border health",Mechanisms for detecting and responding to chemical events,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+CE2,CE,Chemical events,"IHR-related hazards, PoE and border health",Enabling environment for management of chemical events,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+RE1,RE,Radiation emergencies,"IHR-related hazards, PoE and border health",Mechanisms for detecting and responding to radiological and nuclear emergencies,2,3,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes
+RE2,RE,Radiation emergencies,"IHR-related hazards, PoE and border health",Enabling environment for management of radiological and nuclear emergencies,3,4,Default: next capacity level (to be confirmed by the NAPHS Steering Committee),yes

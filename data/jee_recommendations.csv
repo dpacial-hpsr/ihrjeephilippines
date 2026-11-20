@@ -1,0 +1,92 @@
+rec_id,area,indicators,recommendation,naphs_coverage,naphs_action_ids,gap_note
+P1-R1,P1,P1.1;P1.2,Conduct periodic legal analyses across sectors and levels of government,Full,P1.1-a,
+P1-R2,P1,P1.1,Strengthen coherence and mutual supportiveness of legal instruments across sectors and levels,Partial,P1.1-b,Covered only by a generic 'develop/revise' action
+P1-R3,P1,P1.1,"Identify and allocate funding to develop, implement and renew legal instruments",Not reflected,,No funding line for legal work
+P1-R4,P1,P1.1,"Update legal instruments on One Health, PHSM, PoE implementation and biosafety using COVID-19 and exercise lessons",Partial,P1.1-b;PoE1-h;P7.1-c,Lessons-learned review not specified
+P1-R5,P1,P1.2,"Develop, implement and fund a national Gender Action Plan for public health emergencies",Full,P1.2-a;P1.2-b,
+P2-R1,P2,P2.1,"Earmark agency funds under an enabling law, or create a GAA line item for IHR implementation",Partial,P2.1-a,No GAA line item or enabling law named
+P2-R2,P2,P2.1,"Increase PHE prevention, preparedness and response funding incl. capacity, infrastructure and indemnification",Full,P2.1-b,
+P2-R3,P2,P2.1,Integrate the NAPHS with the National DRRM Plan,Full,P2.1-f,
+P2-R4,P2,P2.2,"Review financial policies in early-, intra- and after-action reviews",Full,P2.1-h,
+P2-R5,P2,P2.2,Create a mechanism to increase LGU Quick Response and Calamity Funds during successive events,Full,P2.1-e,
+P3-R1,P3,P3.1;P3.2,Give the National IHR Authority and the NFP a clear legal and governmental mandate and placement,Not reflected,,Governance narrative defers to a future Health Security Law; no strategic action
+P3-R2,P3,P3.1,"Provide sufficient NFP staff and resources, with training and simulation exercises",Partial,P3.1-a,Training and exercises for NFP staff not specified
+P3-R3,P3,P3.2,Develop and disseminate SOPs and advocacy documents for NFP-agency coordination,Full,P3.2-b,
+P4-R1,P4,P4.1;P4.4,Analyse surveillance data to monitor IPC and AMS implementation at all levels,Partial,P4.4-b;R4.1-a,
+P4-R2,P4,P4.2,Evaluate the AMR surveillance system for representativeness of sites,Not reflected,,
+P4-R3,P4,P4.3,Distribute the priority MDRO and unusual-phenotype list requiring confirmatory testing,Partial,P4.3-a,Folded into HAI policy; distribution not specified
+P4-R4,P4,P4.4,Routine training of surveillance officers on AMC surveillance; keep AMC surveillance ongoing,Partial,P4.4-b;P4.4-d,
+P4-R5,P4,P4.4,AMS committees monitor and evaluate compliance with antimicrobial guidelines,Partial,P4.4-c,
+P5-R1,P5,P5.1,Convene PhilCZ and agree a priority zoonoses list,Full,P5.1-a,
+P5-R2,P5,P5.1,"Expand capacity building on zoonoses, wildlife surveillance and the 7-1-7 framework",Partial,D2.3-c;D3.3-c,7-1-7 not reflected
+P5-R3,P5,P5.2,"Conduct early-, intra- and after-action reviews of zoonotic events and implement findings",Partial,P5.2-b,"Single review, not a routine practice"
+P5-R4,P5,P5.2,Joint simulation exercises and RCCE on priority zoonoses,Partial,D2.2-b;R5.3-a,
+P5-R5,P5,P5.2,Link and operationalize PhilCZ within the DRRM platform,Full,P5.2-a,
+P6-R1,P6,P6.1,"Efficient inter-agency information sharing incl. PhilRASFF, ARASFF and INFOSAN",Full,P6.1-a;P6.2-d,
+P6-R2,P6,P6.1;P6.2,"Implement 7-1-7 to monitor foodborne detection, reporting and response",Not reflected,,
+P6-R3,P6,P6.2,Finalize the Food Safety Crisis Management Plan,Full,P6.2-d,
+P6-R4,P6,P6.2,"Continuous capacity building incl. laboratory, inspection, response and advocacy",Full,P6.2-a;P6.2-b,
+P7-R1,P7,P7.1,Review the biosafety and biosecurity legal framework (extend EO 514 or issue a new order),Partial,P7.1-a;P7.1-c,
+P7-R2,P7,P7.2,Expand biosafety and biosecurity training with regular simulation exercises,Partial,P7.2-a;P7.3-c,Simulation exercises not specified
+P7-R3,P7,P7.1,"Increase advanced testing (serology, molecular, NGS) at national reference laboratories",Partial,D1.3-b,
+P7-R4,P7,P7.1,Establish a national multisectoral Biosafety and Biosecurity Committee,Full,P7.1-a,
+P7-R5,P7,P7.1,"National inventory of hazardous pathogens and toxins, and a tool to consolidate high-consequence agents",Partial,P7.1-d,Consolidation tool not specified
+P7-R6,P7,P7.2,Create a national registry of trained biosafety professionals,Not reflected,,
+P7-R7,P7,P7.1,Establish a national reporting system for laboratory-acquired infections and accidental escapes,Not reflected,,
+P8-R1,P8,P8.2,Improve NIP multiyear forecasting and timely procurement,Full,P8.2-a,
+P8-R2,P8,P8.3,Create a dedicated VPD programme and finalize the VPD outbreak manual,Partial,P8.3-a,Dedicated VPD programme not reflected
+P8-R3,P8,P8.2,Strengthen cold chain monitoring and close local gaps,Full,P8.2-d;P8.2-e;P8.2-f,
+P8-R4,P8,P8.1,"Improve immunization information systems, incl. for supplemental immunization",Full,P8.1-f,
+P8-R5,P8,P8.1;P8.3,Finance LGUs for outreach immunization and timely data collection,Not reflected,,
+D1-R1,D1,D1.4,Finalize the NLSP through a multisectoral TWG under a DOH-DENR-DA JAO,Partial,D1.4-a,JAO and TWG terms of reference not specified
+D1-R2,D1,D1.1,Secure long-term financing for specimen transport and referral and lab supply chains,Not reflected,,
+D1-R3,D1,D1.2,"Establish a test validation process with harmonized SOPs (Pandemic Fund, then government funds)",Not reflected,,
+D1-R4,D1,D1.1,National mechanism to certify and register couriers,Full,D1.1-b,
+D1-R5,D1,D1.1;D1.4,"Multisectoral lab network workshop: pathogen list and facility map, LIMS integration, referral SOPs",Partial,P7.1-d;D1.1-a,
+D1-R6,D1,D1.2,Finalize the DA specimen referral manual and strengthen animal-sector NEQAS,Partial,D1.1-a;D1.2-c,
+D1-R7,D1,D1.2,Revise AO 27 and R.A. 4688 so BAI regulates all animal health laboratories,Partial,D1.2-b,R.A. 4688 amendment not reflected
+D2-R1,D2,D2.1,"Improve timeliness: integrate information systems, institutionalize CBS, monitor 7-1-7",Partial,D2.1-c,Community-based surveillance and 7-1-7 monitoring not reflected
+D2-R2,D2,D2.2,Multisectoral SOPs and joint investigations and risk assessments for priority zoonoses,Full,D2.2-a,
+D2-R3,D2,D2.3,"SOPs for information sharing within and between agencies, partners and the public",Partial,D2.3-a;R3.2-f,
+D2-R4,D2,D2.3,Institutionalize subnational field epidemiology training across sectors,Full,D2.3-b;D2.3-c,
+D3-R1,D3,D3.1;D3.2,Multisectoral governance of IHR HR requirements via NDRRMC and the National IHR Authority,Not reflected,,
+D3-R2,D3,D3.1;D3.4,"Unified multisectoral workforce strategy incl. surge, complementing the NHRHMP 2020-2040",Full,D3.1-a,
+D3-R3,D3,D3.3,Finalize the DSO course and establish an FETP postgraduate university partnership,Partial,D3.3-a,University partnership not reflected
+D3-R4,D3,D3.2;D3.4,At least one stable surveillance or epidemiology officer position in each CHD and LGU,Not reflected,,Bears directly on the D3.2 and D3.4 score of 2
+R1-R1,R1,R1.1,"Involve non-health agencies in all-hazards risk assessments incl. CBRN, with exercises and reviews",Partial,R1.1-a,Exercises and after-action reviews not specified
+R1-R2,R1,R1.2,"Equip, staff and link subnational and local PHEOCs",Partial,R1.2-b;R1.2-c,
+R1-R3,R1,R1.4,Operationalize HERTs at all levels with training and regular exercises,Full,R1.4-c,
+R1-R4,R1,R1.5,Review the AO on emergency logistics and use eLMIS end to end,Partial,R1.5-a,AO review not reflected
+R1-R5,R1,R1.3,Strengthen health emergency management competencies and HR,Full,R1.3-a,
+R2-R1,R2,R2.1,Finalize and implement the CBRN consequence management plan,Full,R2.1-a,
+R2-R2,R2,R2.1,Update RADPLAN,Full,R2.1-b;RE1-a,
+R2-R3,R2,R2.1,Review SOPs for joint public health and security responses,Full,R2.1-c,
+R2-R4,R2,R2.1,"Regular sharing of all-hazards information, incl. classified, with security authorities",Full,R2.1-d,
+R2-R5,R2,R2.1,Regular joint training and exercises of public health and security authorities,Not reflected,,
+R3-R1,R3,R3.1,Update case management guidelines with funding for workforce augmentation and training,Partial,R3.1-a,Funding not reflected
+R3-R2,R3,R3.1;R3.2,Develop inter-operable electronic medical records,Full,R3.2-e,
+R3-R3,R3,R3.2,Expand primary care facilities and BUCAS centres,Partial,R3.2-a,
+R3-R4,R3,R3.2,Increase facilities covered by the PhilHealth comprehensive outpatient benefit package,Partial,R3.2-b,"PhilHealth named, but no facility-coverage target"
+R4-R1,R4,R4.1,Assign facility IPC focal points; measurable hand hygiene indicators,Not reflected,,
+R4-R2,R4,R4.1,Assign national and subnational IPC focal points with professional societies,Partial,R4.1-a,
+R4-R3,R4,R4.1;R4.3,Additional IPC policies for public hospitals on overcrowding and staffing,Partial,R4.1-b,
+R4-R4,R4,R4.2,"HCAI surveillance by IPC committees: targets, baseline incidence, M&E indicators",Partial,R4.2-a;P4.3-a,Only one action for a score-2 indicator
+R5-R1,R5,R5.1,Multisectoral policy framework and SOPs for joint RCCE and infodemic management,Full,R5.1-a;R5.1-b,
+R5-R2,R5,R5.2,"Sustainable, routine infodemic management system",Full,R5.2-b,
+R5-R3,R5,R5.1,Add RCCE and infodemic indicators to national M&E systems,Full,R5.2-a,
+PoE-R1,PoE,PoE1,"Enhance quarantine stations: services, digitization, infrastructure incl. animal quarantine farms",Partial,PoE1-c;PoE1-d;PoE1-e;PoE1-g,Government quarantine farms not reflected
+PoE-R2,PoE,PoE1,Core capacities and PHECPs for Manila seaport and Clark and Davao airports toward designation,Partial,PoE2-b,Named PoEs and designation not reflected
+PoE-R3,PoE,PoE2,Surge capacity at designated PoEs for simultaneous events,Not reflected,,
+PoE-R4,PoE,PoE2,Update and exercise PHECPs for NAIA and Mactan-Cebu with One Health and all-hazards scope,Partial,PoE2-b;PoE2-d,
+PoE-R5,PoE,PoE1,Review the Quarantine Act for central government financing,Partial,PoE1-h,
+CE-R1,CE,CE1,Policy and mechanism for chemical event data sharing and reporting,Partial,CE1-d,
+CE-R2,CE,CE2,Policy framework for coherence of chemical response guidelines,Partial,CE1-b,
+CE-R3,CE,CE1,"SOPs for detection, notification, alert and management of chemical events, tested regularly",Not reflected,,
+CE-R4,CE,CE1,Regular national multisectoral chemical response exercises,Full,CE2-e,
+CE-R5,CE,CE1,After-action reviews of real chemical events,Not reflected,,
+CE-R6,CE,CE2,Regular training of responders and LGU capability for chemical events,Full,CE2-d;CE2-f,
+CE-R7,CE,CE1,"Stockpiles of diagnostic agents, antidotes and chelating agents",Partial,CE1-e,Needs identified; stockpiling not reflected
+RE-R1,RE,RE1,Issue RADPLAN; upgrade exposure monitoring and equip first responders,Full,RE1-a;RE2-c;RE2-d,
+RE-R2,RE,RE1,"Issue medical response guidelines with SOPs on radiation injury, biodosimetry and MHPSS",Full,RE1-b;RE1-k,
+RE-R3,RE,RE1,Update criteria for designated facilities and expand the network,Full,RE1-g;RE1-h,
+RE-R4,RE,RE1;RE2,"Sustainable funding and programme management for equipment, stockpiles and exercises",Partial,RE1-i;RE1-j,Funding mechanism not reflected

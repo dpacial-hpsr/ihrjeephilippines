@@ -1,0 +1,16 @@
+check_id,indicator,issue_type,finding,severity,suggested_fix
+C01,D3.4,Missing indicator row,D3.4 (score 2) has no row in the D3 table; surge is addressed only through the National Surge Capacity Plan under D3.1,High,"Add a D3.4 row with surge-specific actions, including stable surveillance officer positions in CHDs and LGUs"
+C02,P2.2,Missing indicator row,"P2.2 has no row; its JEE priority actions (QRF and Calamity Fund, financial reviews) sit under P2.1",Low,Split the P2 table into P2.1 and P2.2
+C03,P7.1,Non-JEE indicator,P7.3 'BSBS regulatory requirements' (score 2) is not a JEE 3rd edition indicator and has no JEE score,Medium,"Re-map actions to P7.1 and P7.2, or label P7.3 as a national add-on indicator without a JEE score"
+C04,R4.1,Non-JEE indicator,R4.5 'IPC regulatory requirements' (score 2) is not a JEE 3rd edition indicator; R4.4 does not exist,Medium,"Re-map actions to R4.1, or label as a national add-on"
+C05,D3.2,No stand-alone action,D3.2 (score 2) refers to 'actions under specific technical areas' only,High,Add at least one D3.2 action owned by a named lead
+C06,P4.2,Duplicated action,"P4.2 repeats the P2 financial-review action verbatim, assigned to DA-ARSP-AH agencies",Medium,"Replace with an AMR-specific action, e.g., evaluation of surveillance site representativeness"
+C07,P4.2,Lead to verify,"Laboratory capacity development (training, QC, proficiency testing) is assigned to OCD and NDRRMC",Low,Confirm the lead; RITM or OHL would be expected
+C08,D2.1,Duplicated action,"'Develop SOPs, manuals and plans' appears under D2.1 (DENR) and D2.3 (EB, DPCB, HEMB, DA)",Low,Differentiate the two actions or merge them
+C09,PoE1,Missing lead authority,"Several PoE actions (PoE1-h, PoE1-i, PoE2-a, PoE2-b, PoE3-a) and R1.4-d have no lead authority",High,Assign a lead for each
+C10,P3.1,JEE overarching recommendation not reflected,No strategic action establishes the National IHR Authority (JEE recommendation 1),High,Add an action with a lead and a target year under P1.1 or P3.1
+C11,D2.1,JEE overarching recommendation not reflected,7-1-7 timeliness metrics (JEE recommendation 5) appear only in the D1 narrative,High,"Add 7-1-7 monitoring actions under D2.1, P5.1, P6.1 and P8.3"
+C12,R4.2,Thin coverage,HCAI surveillance (score 2) has a single capacity-building action,Medium,"Add target HCAIs, baseline incidence and an M&E indicator, per the JEE"
+C13,R4.1,Typographical error,Lead authority reads 'DOH-HRSRB'; HFSRB is intended,Low,Correct to DOH-HFSRB
+C14,,Narrative inconsistency,"'Three multisectoral coordination mechanisms' lists four (PhilCZ, ICAMR, FSRCB, IACEH)",Low,Correct to 'four'
+C15,,No targets,Section 6 sets no target JEE scores for 2029 per indicator,High,Have the Steering Committee approve target_2029 values (see indicators.csv)

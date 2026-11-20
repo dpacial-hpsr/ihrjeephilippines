@@ -1,0 +1,28 @@
+{
+  "title": "JEE readiness",
+  "title_highlight": "gaps to close before the third JEE",
+  "subtitle": "Closing the gaps from the 2024 Joint External Evaluation through the Strategic NAPHS 2026–2030",
+  "prepared_by": "Epidemiology Bureau, Department of Health (National IHR Focal Point and NAPHS Secretariat)",
+  "draft_banner": "Working draft. NAPHS content is drawn from the Updated Draft Strategic NAPHS 2026–2030 (8 May–10 November 2026). JEE-to-NAPHS coverage ratings are a preliminary assessment for validation by the NAPHS subcommittees.",
+  "next_jee": {
+    "date": "2029-11-26",
+    "label": "Third JEE (indicative)",
+    "basis": "NAPHS Section 6 envisions a third JEE in 2029, five years after the second (25–29 November 2024). Month and day are placeholders until a mission date is set."
+  },
+  "stale_after_days": 45,
+  "timezone_offset_hours": 8,
+  "sources": [
+    {
+      "label": "WHO (2025). Joint external evaluation of IHR (2005) core capacities of the Philippines: mission report, 25–29 November 2024",
+      "url": "https://www.who.int/publications/i/item/9789240116795"
+    },
+    {
+      "label": "WHO (2022). Joint external evaluation tool: IHR (2005), third edition",
+      "url": "https://www.who.int/publications/i/item/9789240051980"
+    },
+    {
+      "label": "DOH. Strategic National Action Plan for Health Security 2026–2030 (Updated Draft, 8 May–10 November 2026)",
+      "url": ""
+    }
+  ]
+}

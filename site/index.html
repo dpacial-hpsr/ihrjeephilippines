@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Literata:opsz,wght@7..72,500..800&display=swap">
+<title>JEE Readiness Dashboard</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Crect width=%2716%27 height=%2716%27 rx=%273%27 fill=%27%23A320E0%27/%3E%3C/svg%3E">
+<meta name="description" content="Gaps to close before the third Joint External Evaluation of the Philippines, mapped to the Strategic NAPHS 2026–2030.">
+<style>
+:root{
+  color-scheme:light;
+  --page:#F7F5FA;--surface:#FFFFFF;--surface-2:#F1EDF6;
+  --ink:#1B1426;--ink-2:#574E66;--muted:#746B86;
+  --grid:#E2DCEA;--axis:#C5BCD3;--ring:#E2DCEA;
+  --accent:#A320E0;--accent-soft:#F3E6FC;--on-accent:#FFFFFF;
+  --yellow:#FBD301;--yellow-edge:#B89A00;--on-yellow:#1B1426;
+  --mast-bg:#A320E0;--mast-ink:#FFFFFF;--mast-muted:#F1E2FB;--mast-hi:#FBD301;
+  --s1:#D2A3F3;--s2:#A320E0;--s3:#7A17B2;--s4:#55107F;--s5:#320A4C;
+  --s1-ink:#1B1426;--s2-ink:#fff;--s3-ink:#fff;--s4-ink:#fff;--s5-ink:#fff;
+  --good:#23784A;--warning:#D4A800;--serious:#D4A800;--critical:#C0262D;
+  --ok-t:#23784A;--ok-soft:#E0F2E7;--warn-t:#9A4708;--warn-soft:#FDEBDA;--chk-t:#C0262D;--chk-soft:#FCE6E6;--idle-t:#625A72;--idle-soft:#EEEBF2;
+  --good-text:#23784A;--critical-text:#C0262D;
+  --st-nyr:#DED7E8;--st-ns:#625A72;--st-on:#A320E0;--st-risk:#D4A800;--st-delay:#C0262D;--st-done:#23784A;--st-drop:#3E3550;
+  --display:"Literata",Georgia,"Times New Roman",serif;
+  --body:"Atkinson Hyperlegible","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --shadow:none;
+}
+@media (prefers-color-scheme:dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --page:#110C17;--surface:#1A1322;--surface-2:#241D2C;
+    --ink:#EEE8F4;--ink-2:#B5AAC4;--muted:#958AA6;
+    --grid:#2F2639;--axis:#45394F;--ring:#2F2639;
+    --accent:#B84DF0;--accent-soft:#2E1840;--on-accent:#1A1322;
+    --yellow-edge:#FBD301;
+    --s1:#7B26B3;--s2:#9637D8;--s3:#B866EA;--s4:#D6A6F6;--s5:#F0DDFD;
+    --s1-ink:#fff;--s2-ink:#fff;--s3-ink:#1A1322;--s4-ink:#1A1322;--s5-ink:#1A1322;
+    --good:#2FA866;--warning:#D4A800;--serious:#D4A800;--critical:#E5484D;
+    --ok-t:#72D39C;--ok-soft:#153222;--warn-t:#F5A55A;--warn-soft:#3A2410;--chk-t:#FF8E8E;--chk-soft:#3E1719;--idle-t:#ABA1BB;--idle-soft:#241D2C;
+    --good-text:#72D39C;--critical-text:#FF8E8E;
+    --st-nyr:#3A3046;--st-ns:#ABA1BB;--st-on:#B84DF0;--st-drop:#776D88;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#110C17;--surface:#1A1322;--surface-2:#241D2C;
+  --ink:#EEE8F4;--ink-2:#B5AAC4;--muted:#958AA6;
+  --grid:#2F2639;--axis:#45394F;--ring:#2F2639;
+  --accent:#B84DF0;--accent-soft:#2E1840;--on-accent:#1A1322;
+  --yellow-edge:#FBD301;
+  --s1:#7B26B3;--s2:#9637D8;--s3:#B866EA;--s4:#D6A6F6;--s5:#F0DDFD;
+  --s1-ink:#fff;--s2-ink:#fff;--s3-ink:#1A1322;--s4-ink:#1A1322;--s5-ink:#1A1322;
+  --good:#2FA866;--warning:#D4A800;--serious:#D4A800;--critical:#E5484D;
+  --ok-t:#72D39C;--ok-soft:#153222;--warn-t:#F5A55A;--warn-soft:#3A2410;--chk-t:#FF8E8E;--chk-soft:#3E1719;--idle-t:#ABA1BB;--idle-soft:#241D2C;
+  --good-text:#72D39C;--critical-text:#FF8E8E;
+  --st-nyr:#3A3046;--st-ns:#ABA1BB;--st-on:#B84DF0;--st-drop:#776D88;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;line-height:1.15}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+/* masthead, as on the Resilient Philippines page */
+.masthead{background:var(--mast-bg);color:var(--mast-ink);border-bottom:6px solid var(--yellow)}
+.masthead .wrap{padding-top:28px;padding-bottom:26px;display:grid;gap:12px}
+.masthead .eyebrow{color:var(--mast-muted)}
+.masthead h1{margin:0;font-size:clamp(1.9rem,4.4vw,3rem);font-weight:800;font-stretch:80%;letter-spacing:-.01em;max-width:24ch}
+.masthead h1 span{color:var(--mast-hi)}
+.sub{margin:0;font-size:1.04rem;max-width:72ch}
+.meta{display:flex;flex-wrap:wrap;gap:4px 18px;color:var(--mast-muted);font-size:13px}
+.banner{margin:20px 0 0;padding:10px 14px;border-radius:8px;background:var(--accent-soft);border-left:4px solid var(--accent);font-size:13px;color:var(--ink-2)}
+.banner b{color:var(--ink)}
+nav.toc{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--grid);margin-top:20px}
+nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding:6px 20px;align-items:center}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--ink-2);font-weight:700;font-size:13px;padding:6px 10px;border-radius:6px}
+nav.toc a:hover{background:var(--accent-soft);color:var(--ink)}
+nav.toc button{margin-left:auto}
+section{padding:40px 0 4px;scroll-margin-top:56px}
+.sechead{border-top:2px solid var(--ink);padding-top:14px;margin-bottom:6px}
+.sechead .row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline}
+.secnum{font-size:12.5px;font-weight:700;color:var(--on-yellow);background:var(--yellow);padding:1px 7px;border-radius:4px;align-self:center}
+h2{font-size:clamp(1.4rem,2.4vw,1.8rem);font-weight:750;font-stretch:88%;margin:0}
+.basis{display:inline-flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:4px;border:1px solid var(--axis);color:var(--ink-2);background:var(--surface);white-space:nowrap}
+.tag.doc{border-color:var(--ink);color:var(--ink)} .tag.der{border-style:dashed} .tag.tbc{border-color:var(--chk-t);color:var(--chk-t)}
+.lede{color:var(--ink-2);margin:8px 0 16px;max-width:900px;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:10px;padding:18px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--grid);border:1px solid var(--grid);border-radius:10px;overflow:hidden;margin-top:20px}
+.kpi{background:var(--surface);padding:16px 16px 14px;display:grid;gap:4px;align-content:start}
+.kpi .k{font-size:13px;color:var(--ink);line-height:1.35;min-height:35px}
+.kpi .v{font-family:var(--display);font-weight:800;font-stretch:78%;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.05}
+.kpi .v small{font-family:var(--body);font-size:14px;font-weight:400;color:var(--muted);font-stretch:100%}
+.kpi .n{font-size:12px;color:var(--muted)}
+.btn,select,input[type=search]{font:inherit;font-size:13px;color:var(--ink);background:var(--surface);border:1px solid var(--axis);border-radius:8px;padding:6px 10px}
+.btn{cursor:pointer;font-weight:700}
+.btn:hover{border-color:var(--ink)}
+.btn[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+.filters select{max-width:220px}
+.filters label{font-size:12.5px;color:var(--ink-2);display:flex;gap:6px;align-items:center}
+.filters .count{margin-left:auto;font-size:12.5px;color:var(--muted)}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.head>div:first-child{flex:1 1 640px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--ink-2);align-items:center}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:5px}
+/* score map */
+.map{display:grid;grid-template-columns:minmax(220px,300px) 1fr}
+.map .dom{grid-column:1/-1;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:14px 0 6px;border-bottom:1px solid var(--grid)}
+.map .ta{padding:8px 12px 8px 0;border-bottom:1px solid var(--grid);font-size:13.5px;display:flex;flex-direction:column;justify-content:center}
+.map .ta b{font-weight:700}
+.map .ta span{color:var(--muted);font-size:12px}
+.map .cells{display:flex;flex-wrap:wrap;gap:4px;padding:6px 0;border-bottom:1px solid var(--grid);align-items:center}
+.cell{position:relative;width:76px;height:52px;border-radius:6px;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;font:inherit;line-height:1.1;padding:0;transition:opacity .15s,transform .15s}
+.cell .c{font-size:11.5px;font-weight:700;opacity:.92}
+.cell .s{font-family:var(--display);font-size:19px;font-weight:800}
+.cell .t{position:absolute;top:3px;right:5px;font-size:10px;font-weight:700;opacity:.85}
+.cell.dim{opacity:.18}
+.cell:hover,.cell:focus-visible{transform:translateY(-1px);outline:2px solid var(--ink);outline-offset:2px}
+.cell.flagged::after{content:"";position:absolute;left:5px;top:5px;width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 2px var(--critical)}
+/* tables */
+.tablewrap{overflow-x:auto;border:1px solid var(--ring);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--grid);vertical-align:top}
+th{font-size:12.5px;font-weight:700;color:var(--ink-2);background:var(--surface);position:sticky;top:0;white-space:nowrap;border-bottom:1px solid var(--axis)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody tr.click{cursor:pointer}
+tbody tr.click:hover{background:var(--accent-soft)}
+tbody tr:last-child td{border-bottom:0}
+.code{font-weight:700;white-space:nowrap}
+.small{font-size:12.5px;color:var(--ink-2)}
+.muted{color:var(--muted)}
+/* status pills, as on the Resilient Philippines page, with an icon so colour never carries meaning alone */
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:1px 8px 1px 3px;border-radius:999px;white-space:nowrap}
+.badge i{font-style:normal;display:inline-flex;width:16px;height:16px;border-radius:50%;align-items:center;justify-content:center;font-size:10px;color:#fff}
+.b-critical{background:var(--chk-soft);color:var(--chk-t)} .b-critical i{background:var(--critical)}
+.b-warning,.b-serious{background:var(--warn-soft);color:var(--warn-t)} .b-warning i,.b-serious i{background:var(--warning);color:#1B1426}
+.b-good{background:var(--ok-soft);color:var(--ok-t)} .b-good i{background:var(--good)}
+.b-muted{background:var(--idle-soft);color:var(--idle-t)} .b-muted i{background:var(--st-ns)}
+.b-blue{background:var(--accent-soft);color:var(--accent)} .b-blue i{background:var(--st-on)}
+.b-nyr{background:var(--idle-soft);color:var(--idle-t)} .b-nyr i{background:var(--st-nyr);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:11.5px;padding:1px 7px;border-radius:5px;background:var(--surface);border:1px solid var(--axis);color:var(--ink-2);white-space:nowrap}
+.chip.hot{border-color:var(--chk-t);color:var(--chk-t);background:var(--chk-soft)}
+.scorepath{white-space:nowrap;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;min-width:22px;text-align:center;border-radius:5px;font-weight:700;padding:0 5px}
+.sbar{display:flex;gap:2px;height:10px;min-width:110px;border-radius:4px;overflow:hidden;margin-top:4px}
+.sbar span{display:block;height:100%}
+/* stacked horizontal bars */
+.hbars{display:grid;grid-template-columns:minmax(200px,280px) 1fr 70px;gap:8px 12px;align-items:center;font-size:13px}
+.hbars .lab span{color:var(--muted);font-size:12px}
+.hbars .track{display:flex;gap:2px;height:16px}
+.hbars .track span{display:block;height:100%;min-width:3px}
+.hbars .track span:first-child{border-radius:4px 0 0 4px}
+.hbars .track span:last-child{border-radius:0 4px 4px 0}
+.hbars .track span:only-child{border-radius:4px}
+.hbars .tot{font-variant-numeric:tabular-nums;color:var(--ink-2);text-align:right}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.ocard{background:var(--surface);border:1px solid var(--ring);border-top:4px solid var(--accent);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.ocard h3{font-size:15px;margin:0;line-height:1.3;font-weight:700}
+.ocard p{margin:0;font-size:12.5px;color:var(--ink-2)}
+h3.sec{font-size:17px;font-weight:700;font-stretch:92%;margin:22px 0 10px}
+.toggle-table{font-size:12.5px}
+/* drawer */
+dialog{border:0;padding:0;border-radius:12px;max-width:880px;width:calc(100% - 32px);max-height:88vh;background:var(--surface);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(27,20,38,.55)}
+.dlg-head{position:sticky;top:0;background:var(--surface);padding:18px 20px 12px;border-bottom:4px solid var(--accent);display:flex;gap:12px;align-items:flex-start;z-index:1}
+.dlg-head h3{margin:0;font-size:20px;line-height:1.25}
+.dlg-body{padding:16px 20px 22px}
+.dlg-body h4{font-family:var(--body);font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:20px 0 8px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.fact{background:var(--surface-2);border-radius:8px;padding:10px 12px}
+.fact .k{font-size:12px;color:var(--ink-2)} .fact .v{font-family:var(--display);font-size:22px;font-weight:800}
+.fact .v .small{font-family:var(--body);font-weight:400}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding:8px 0;border-bottom:1px solid var(--grid);font-size:13.5px}
+ul.plain li:last-child{border-bottom:0}
+#tip{position:fixed;pointer-events:none;z-index:100;background:var(--ink);color:var(--surface);font-size:12.5px;line-height:1.4;padding:7px 10px;border-radius:7px;max-width:320px;opacity:0;transition:opacity .1s}
+footer{padding:36px 0 48px;color:var(--muted);font-size:12.5px}
+.prose{font-size:14px;color:var(--ink-2);max-width:900px}
+.prose code,.lede code{font-size:12.5px;background:var(--surface-2);padding:1px 5px;border-radius:4px}
+.prose ol,.prose ul{padding-left:20px}
+.empty{padding:16px;color:var(--muted);font-size:13px}
+@media (max-width:760px){
+  .map{grid-template-columns:1fr}.map .ta{border-bottom:0;padding-bottom:0}
+  .hbars{grid-template-columns:1fr 60px}.hbars .lab{grid-column:1/-1}
+  .grid2{grid-template-columns:1fr}
+}
+@media print{nav.toc,.filters,.btn{display:none}}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow" id="prepared"></div>
+    <h1 id="title">JEE Readiness Dashboard</h1>
+    <p class="sub" id="subtitle"></p>
+    <div class="meta"><span id="asof"></span><span id="built"></span><span id="countdownmeta"></span></div>
+  </div>
+</header>
+<div class="wrap">
+  <div class="banner" id="banner"></div>
+  <div class="kpis" id="kpis"></div>
+</div>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="#map">Score map</a><a href="#register">Priority gap register</a><a href="#coverage">JEE vs NAPHS coverage</a>
+    <a href="#implementation">Implementation tracker</a><a href="#checks">NAPHS draft checks</a><a href="#method">Method and updating</a>
+    <button class="btn" id="theme" type="button" aria-label="Toggle dark mode">◐ Theme</button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="map">
+    <div class="head">
+      <div>
+        <div class="sechead"><div class="row"><span class="secnum">01</span><h2>Where we stand: 56 JEE indicators</h2><span class="basis"><span class="tag doc">Documented: JEE 2024 scores</span><span class="tag tbc">Targets to confirm</span></span></div></div>
+        <p class="lede">Each tile is one indicator, shaded by its latest score. The small figure at top right is the 2029 target; a yellow dot ringed in red marks a structural gap (no NAPHS row, one or no action, an action without a lead, or an overdue action). Select a tile for the detail.</p>
+      </div>
+      <div class="legend" id="scorelegend"></div>
+    </div>
+    <div class="filters" id="filters">
+      <label>Domain <select id="f-domain"><option value="">All</option></select></label>
+      <label>Tier <select id="f-tier"><option value="">All</option><option>Critical</option><option>Advance</option><option>Sustain</option></select></label>
+      <label><input type="checkbox" id="f-eb"> EB leads or co-leads an action</label>
+      <label><input type="checkbox" id="f-flag"> Flagged only</label>
+      <input type="search" id="f-q" placeholder="Search indicator, action, lead…" aria-label="Search">
+      <span class="count" id="f-count"></span>
+    </div>
+    <div class="card"><div class="map" id="scoremap"></div></div>
+  </section>
+
+  <section id="register">
+    <div class="head">
+      <div>
+        <div class="sechead"><div class="row"><span class="secnum">02</span><h2>Priority gap register</h2><span class="basis"><span class="tag der">Ranking derived</span></span></div></div>
+        <p class="lede">Ranked by tier (Critical = score 1–2, Advance = 3, Sustain = 4–5), then by points to target, then by JEE priority actions the NAPHS does not yet carry. Filters above apply here.</p>
+      </div>
+      <div class="legend" id="statuslegend"></div>
+    </div>
+    <div class="tablewrap"><table id="regtable">
+      <thead><tr><th class="num">#</th><th>Indicator</th><th>Tier</th><th>2024 → latest → target</th><th class="num">Gap</th><th>NAPHS actions</th><th>JEE actions in NAPHS</th><th>Flags</th></tr></thead>
+      <tbody></tbody></table></div>
+  </section>
+
+  <section id="coverage">
+    <div class="sechead"><div class="row"><span class="secnum">03</span><h2>Is the NAPHS answering the JEE?</h2><span class="basis"><span class="tag doc">Documented: JEE and NAPHS texts</span><span class="tag tbc">Ratings to confirm</span></span></div></div>
+    <p class="lede">Each JEE 2024 priority action is rated against the NAPHS strategic actions: <b>Full</b> (an action carries it), <b>Partial</b> (an action touches it but leaves out a named element), or <b>Not reflected</b>. Ratings are preliminary and sit in <code>data/jee_recommendations.csv</code> for the subcommittees to confirm or change.</p>
+    <h3 class="sec">Five overarching JEE recommendations</h3>
+    <div class="cards" id="overarching"></div>
+    <div class="grid2" style="margin-top:18px">
+      <div class="card">
+        <div class="head"><h3 class="sec" style="margin-top:0">Coverage by technical area</h3><button class="btn toggle-table" data-target="covtable" type="button">Table view</button></div>
+        <div class="legend" id="covlegend" style="margin-bottom:10px"></div>
+        <div class="hbars" id="covbars"></div>
+        <div class="tablewrap" id="covtable" hidden style="margin-top:10px"></div>
+      </div>
+      <div class="card">
+        <h3 class="sec" style="margin-top:0">JEE priority actions not reflected in the NAPHS</h3>
+        <ul class="plain" id="notreflected"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="implementation">
+    <div class="sechead"><div class="row"><span class="secnum">04</span><h2>Implementation tracker</h2><span class="basis"><span class="tag doc">Documented: action tracker</span><span class="tag der">Flags derived</span></span></div></div>
+    <p class="lede">Status of every NAPHS strategic action as reported in <code>data/naphs_actions.csv</code>. An action is <b>overdue</b> when its target date has passed without completion, and <b>stale</b> when an active action has not been updated within the configured window.</p>
+    <div class="kpis" id="implkpis" style="margin-top:0;margin-bottom:16px"></div>
+    <div class="grid2">
+      <div class="card">
+        <div class="head"><h3 class="sec" style="margin-top:0">Action status by domain</h3><button class="btn toggle-table" data-target="sttable" type="button">Table view</button></div>
+        <div class="legend" id="statuslegend2" style="margin-bottom:10px"></div>
+        <div class="hbars" id="stbars"></div>
+        <div class="tablewrap" id="sttable" hidden style="margin-top:10px"></div>
+      </div>
+      <div class="card">
+        <div class="head"><h3 class="sec" style="margin-top:0">Actions per lead authority (top 15)</h3><button class="btn toggle-table" data-target="leadtable" type="button">Table view</button></div>
+        <p class="small" style="margin:0 0 10px">Counts an action once for each lead it names. A long bar means concentrated delivery risk.</p>
+        <div class="hbars" id="leadbars"></div>
+        <div class="tablewrap" id="leadtable" hidden style="margin-top:10px"></div>
+      </div>
+    </div>
+    <h3 class="sec">Needs attention</h3>
+    <div class="tablewrap"><table id="attn"><thead><tr><th>Action</th><th>Indicator</th><th>Issue</th><th>Lead</th><th>Status</th><th>Target</th><th>Updated</th></tr></thead><tbody></tbody></table></div>
+    <h3 class="sec">All strategic actions</h3>
+    <div class="filters">
+      <label>Status <select id="a-status"><option value="">All</option></select></label>
+      <input type="search" id="a-q" placeholder="Search actions or leads…" aria-label="Search actions">
+      <span class="count" id="a-count"></span>
+    </div>
+    <div class="tablewrap" style="max-height:620px;overflow:auto"><table id="alltable"><thead><tr><th>ID</th><th>Strategic action</th><th>Lead authority</th><th>Status</th><th class="num">%</th><th>Target</th><th>Updated</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section id="checks">
+    <div class="sechead"><div class="row"><span class="secnum">05</span><h2>NAPHS draft alignment checks</h2><span class="basis"><span class="tag der">Desk review</span></span></div></div>
+    <p class="lede">Points in the current NAPHS draft that weaken the line of sight from a JEE indicator to a funded, owned action. Each is a drafting fix rather than a new commitment.</p>
+    <div class="tablewrap"><table id="checktable"><thead><tr><th>ID</th><th>Severity</th><th>Indicator</th><th>Issue</th><th>Finding</th><th>Suggested fix</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section id="method">
+    <div class="sechead"><div class="row"><span class="secnum">06</span><h2>Method and updating</h2><span class="basis"></span></div></div>
+    <div class="prose">
+      <h3 class="sec">How the dashboard decides what matters</h3>
+      <ol>
+        <li><b>Baseline.</b> 2024 JEE scores for the 56 JEE (third edition) indicators. A later internal self-assessment entered in <code>data/score_history.csv</code> becomes the “latest” score.</li>
+        <li><b>Target.</b> <code>target_2029</code> in <code>data/indicators.csv</code>. Until the NAPHS Steering Committee sets targets, the default is the next capacity level for scores 1–3 and holding the current level for scores 4–5; D2.2 carries the score of 5 stated in the NAPHS.</li>
+        <li><b>Tier.</b> Critical (1–2, limited capacity), Advance (3, developed but not yet demonstrated), Sustain (4–5).</li>
+        <li><b>Coverage.</b> Each JEE priority action is matched to NAPHS strategic actions and rated Full, Partial or Not reflected.</li>
+        <li><b>Flags.</b> No NAPHS indicator row; one or no strategic action for an indicator below target; an action without a lead; JEE actions not reflected; no status reported; overdue or stale actions.</li>
+      </ol>
+      <h3 class="sec">How to update</h3>
+      <ul>
+        <li><b>Action status:</b> edit <code>data/naphs_actions.csv</code> (status, progress_pct, target_date, last_updated, focal_person, evidence_url, remarks), or link the Google Sheet tracker described in the README.</li>
+        <li><b>New self-assessment scores:</b> add rows to <code>data/score_history.csv</code>.</li>
+        <li><b>Targets and coverage ratings:</b> edit <code>data/indicators.csv</code> and <code>data/jee_recommendations.csv</code>.</li>
+      </ul>
+      <p>Every commit to <code>data/</code> rebuilds and republishes the page. A scheduled run every Friday afternoon refreshes the countdown and the overdue and stale flags. If a file has an error, the build stops, the published page stays as it was, and the error list appears in the Actions run summary.</p>
+      <p>Allowed status values: <span id="statusvals"></span>.</p>
+      <h3 class="sec">Sources</h3>
+      <ul id="sources"></ul>
+      <p>Download the data files: <span id="csvlinks"></span>.</p>
+    </div>
+  </section>
+</main>
+<footer class="wrap" id="foot"></footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title"><div class="dlg-head"><div style="flex:1"><div class="eyebrow" id="dlg-eyebrow"></div><h3 id="dlg-title"></h3></div><button class="btn" id="dlg-close" type="button" aria-label="Close">✕</button></div><div class="dlg-body" id="dlg-body"></div></dialog>
+<div id="tip" role="tooltip"></div>
+
+<script>
+(() => {
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const SCORE_LABEL = {1:"No capacity",2:"Limited",3:"Developed",4:"Demonstrated",5:"Sustainable"};
+const TIER = {Critical:["b-critical","!"],Advance:["b-warning","↑"],Sustain:["b-good","✓"]};
+const COV = {"Full":["b-good","✓","var(--good)"],"Partial":["b-warning","◐","var(--warning)"],"Not reflected":["b-critical","✕","var(--critical)"]};
+const ST = {"Not yet reported":["b-nyr","·","var(--st-nyr)"],"Not started":["b-muted","○","var(--st-ns)"],"On track":["b-blue","▶","var(--st-on)"],
+  "At risk":["b-warning","▲","var(--st-risk)"],"Delayed":["b-critical","■","var(--st-delay)"],"Completed":["b-good","✓","var(--st-done)"],"Dropped":["b-muted","✕","var(--st-drop)"]};
+const SEV = {High:["b-critical","!"],Medium:["b-serious","•"],Low:["b-muted","·"]};
+const badge = (map, k) => { const m = map[k] || ["b-muted","·"]; return `<span class="badge ${m[0]}"><i aria-hidden="true">${m[1]}</i>${esc(k)}</span>`; };
+const pill = s => `<span class="pill" style="background:var(--s${s});color:var(--s${s}-ink)">${s}</span>`;
+
+// theme toggle (preference kept per browser; storage may be unavailable)
+const root = document.documentElement;
+try { const t = localStorage.getItem("jee-theme"); if (t) root.dataset.theme = t; } catch (e) {}
+$("#theme").onclick = () => {
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("jee-theme", root.dataset.theme); } catch (e) {}
+};
+
+// tooltip
+const tip = $("#tip");
+const showTip = (el, x, y) => { tip.innerHTML = el.dataset.tip; tip.style.opacity = 1;
+  const r = tip.getBoundingClientRect(); let L = x + 14, T = y + 14;
+  if (L + r.width > innerWidth - 8) L = x - r.width - 14; if (T + r.height > innerHeight - 8) T = y - r.height - 14;
+  tip.style.left = L + "px"; tip.style.top = T + "px"; };
+document.addEventListener("mousemove", e => { const el = e.target.closest("[data-tip]"); if (el) showTip(el, e.clientX, e.clientY); else tip.style.opacity = 0; });
+document.addEventListener("focusin", e => { const el = e.target.closest("[data-tip]"); if (el) { const r = el.getBoundingClientRect(); showTip(el, r.right, r.bottom); } });
+document.addEventListener("focusout", () => tip.style.opacity = 0);
+document.querySelectorAll(".toggle-table").forEach(b => b.onclick = () => { const t = document.getElementById(b.dataset.target); t.hidden = !t.hidden; b.setAttribute("aria-pressed", String(!t.hidden)); });
+
+fetch("data.json", {cache: "no-store"}).then(r => r.json()).then(render).catch(err => {
+  document.querySelector("main").innerHTML = `<p class="empty">Could not load data.json (${esc(err.message)}). If you opened this file directly, serve the <code>site</code> folder instead: <code>python -m http.server -d site</code>.</p>`;
+});
+
+function render(D) {
+  const C = D.config, S = D.summary;
+  const IND = Object.fromEntries(D.indicators.map(x => [x.code, x]));
+  const ACT = Object.fromEntries(D.actions.map(a => [a.id, a]));
+  const REC = Object.fromEntries(D.recommendations.map(r => [r.rec_id, r]));
+  const CHK = Object.fromEntries(D.checks.map(c => [c.check_id, c]));
+  const fmtDate = s => s ? new Date(s + "T00:00:00").toLocaleDateString("en-PH", {day:"numeric", month:"short", year:"numeric"}) : "—";
+
+  document.title = C.title_highlight ? `${C.title}: ${C.title_highlight}` : C.title;
+  $("#title").innerHTML = C.title_highlight ? `${esc(C.title)}: <span>${esc(C.title_highlight)}</span>` : esc(C.title); $("#subtitle").textContent = C.subtitle; $("#prepared").textContent = C.prepared_by;
+  $("#banner").innerHTML = `<b>Draft for internal coordination.</b> ${esc(C.draft_banner)}`;
+  $("#asof").textContent = "Tracker data as of " + (D.data_as_of ? fmtDate(D.data_as_of) : "— (no status reported yet)");
+  $("#built").textContent = "Page built " + new Date(D.built_at).toLocaleString("en-PH", {dateStyle:"medium", timeStyle:"short"}) + (D.commit ? ` · ${D.commit}` : "");
+  const days = Math.round((new Date(C.next_jee.date + "T00:00:00+08:00") - new Date()) / 864e5);
+  $("#countdownmeta").textContent = `${C.next_jee.label}: ${fmtDate(C.next_jee.date)}`;
+
+  const k = (label, value, note, tipText) => `<div class="kpi"${tipText ? ` data-tip="${esc(tipText)}" tabindex="0"` : ""}><div class="k">${label}</div><div class="v">${value}</div><div class="n">${note}</div></div>`;
+  $("#kpis").innerHTML = [
+    k("Indicators at limited capacity (score 1–2)", `${S.limited} <small>of ${S.indicators}</small>`, `${S.developed} developed · ${S.demonstrated_plus} demonstrated or sustainable`),
+    k("Average score", `${S.mean_score.toFixed(2)}`, S.mean_score === S.mean_2024 ? "2024 JEE baseline" : `2024 JEE: ${S.mean_2024.toFixed(2)}`),
+    k("Indicators at their 2029 target", `${S.at_target} <small>of ${S.indicators}</small>`, `${S.points_to_target} score points still to gain`),
+    k("JEE priority actions not in the NAPHS", `${S.coverage["Not reflected"]} <small>of ${S.recs}</small>`, `${S.coverage["Partial"]} more are only partly carried`),
+    k("NAPHS actions with a reported status", `${S.actions_reported} <small>of ${S.actions}</small>`, `${S.actions_completed} completed · ${S.actions_overdue} overdue`),
+    k(`Days to the ${esc(C.next_jee.label.charAt(0).toLowerCase() + C.next_jee.label.slice(1))}`, `${days.toLocaleString()}`, `${(days / 365.25).toFixed(1)} years`, C.next_jee.basis),
+  ].join("");
+
+  // legends
+  $("#scorelegend").innerHTML = [1,2,3,4,5].map(s => `<span><span class="sw" style="background:var(--s${s})"></span>${s} ${SCORE_LABEL[s]}</span>`).join("") +
+    `<span><span class="sw" style="background:var(--yellow);border-radius:50%;width:9px;height:9px;box-shadow:0 0 0 2px var(--critical)"></span>Structural gap</span>`;
+  const stLegend = D.statuses.map(s => `<span><span class="sw" style="background:${ST[s][2]}"></span>${s}</span>`).join("");
+  $("#statuslegend").innerHTML = stLegend; $("#statuslegend2").innerHTML = stLegend;
+  $("#covlegend").innerHTML = D.coverage_levels.map(c => `<span><span class="sw" style="background:${COV[c][2]}"></span>${c}</span>`).join("");
+  $("#statusvals").textContent = D.statuses.join(" · ");
+
+  // filters
+  D.domains.forEach(d => $("#f-domain").insertAdjacentHTML("beforeend", `<option>${esc(d)}</option>`));
+  const searchText = x => [x.code, x.name, x.technical_area, ...x.actions.map(id => ACT[id].text + " " + ACT[id].lead)].join(" ").toLowerCase();
+  const TXT = Object.fromEntries(D.indicators.map(x => [x.code, searchText(x)]));
+  const passes = x => {
+    const d = $("#f-domain").value, t = $("#f-tier").value, q = $("#f-q").value.trim().toLowerCase();
+    return (!d || x.domain === d) && (!t || x.tier === t) && (!$("#f-eb").checked || x.eb) && (!$("#f-flag").checked || x.flags.length) && (!q || TXT[x.code].includes(q));
+  };
+  const statusBar = codes => {
+    const n = codes.length; if (!n) return `<div class="small muted">none</div>`;
+    const c = {}; codes.forEach(id => c[ACT[id].status] = (c[ACT[id].status] || 0) + 1);
+    return `<div class="sbar" data-tip="${esc(D.statuses.filter(s => c[s]).map(s => `${s}: ${c[s]}`).join("<br>"))}">` +
+      D.statuses.filter(s => c[s]).map(s => `<span style="flex:${c[s]};background:${ST[s][2]}"></span>`).join("") + `</div>`;
+  };
+
+  function drawMap() {
+    let html = "", shown = 0;
+    D.domains.forEach(dom => {
+      html += `<div class="dom">${esc(dom)}</div>`;
+      D.areas.filter(a => a.domain === dom).forEach(a => {
+        html += `<div class="ta"><b>${esc(a.area)} · ${esc(a.technical_area)}</b><span>Average ${a.mean.toFixed(1)} · ${a.indicators.length} indicator${a.indicators.length > 1 ? "s" : ""}</span></div><div class="cells">`;
+        a.indicators.forEach(c => {
+          const x = IND[c], ok = passes(x); if (ok) shown++;
+          const t = `<b>${esc(x.code)} ${esc(x.name)}</b><br>Latest ${x.latest} (${SCORE_LABEL[x.latest]}) · target ${x.target}<br>${x.actions.length} NAPHS action(s)` + (x.flags.length ? `<br>Flags: ${esc(x.flags.join("; "))}` : "");
+          html += `<button type="button" class="cell${ok ? "" : " dim"}${x.flags.some(f => /No NAPHS indicator row|One or no strategic action|Action without lead|Overdue/.test(f)) ? " flagged" : ""}" data-code="${esc(c)}" data-tip="${esc(t)}" aria-label="${esc(`${x.code} ${x.name}: score ${x.latest}, target ${x.target}`)}" style="background:var(--s${x.latest});color:var(--s${x.latest}-ink)"><span class="t">→${x.target}</span><span class="s">${x.latest}</span><span class="c">${esc(x.code)}</span></button>`;
+        });
+        html += `</div>`;
+      });
+    });
+    $("#scoremap").innerHTML = html;
+    $("#f-count").textContent = `${shown} of ${D.indicators.length} indicators shown`;
+  }
+  function drawRegister() {
+    const rows = D.indicators.filter(passes).map(x => {
+      const cv = x.coverage, nrec = x.recs.length;
+      const covTxt = nrec ? `<div class="chips">${D.coverage_levels.filter(c => cv[c]).map(c => `<span class="chip${c === "Not reflected" ? " hot" : ""}">${COV[c][1]} ${cv[c]} ${c.toLowerCase()}</span>`).join("")}</div>` : `<span class="small muted">—</span>`;
+      return `<tr class="click" data-code="${esc(x.code)}" tabindex="0">
+        <td class="num">${x.priority}</td>
+        <td><span class="code">${esc(x.code)}</span> ${esc(x.name)}<div class="small">${esc(x.technical_area)}</div></td>
+        <td>${badge(TIER, x.tier)}</td>
+        <td class="scorepath">${pill(x.jee_2024)} → ${pill(x.latest)} → ${pill(x.target)}</td>
+        <td class="num">${x.gap ? "+" + x.gap : "0"}</td>
+        <td><span class="small">${x.actions.length} own${x.supporting.length ? ` · ${x.supporting.length} supporting` : ""}</span>${statusBar(x.actions)}</td>
+        <td>${covTxt}</td>
+        <td><div class="chips">${x.flags.map(f => `<span class="chip${/not in NAPHS|No NAPHS|without lead|One or no|Overdue/.test(f) ? " hot" : ""}">${esc(f)}</span>`).join("") || `<span class="small muted">none</span>`}</div></td></tr>`;
+    });
+    $("#regtable tbody").innerHTML = rows.join("") || `<tr><td colspan="8" class="empty">No indicator matches the filters.</td></tr>`;
+  }
+  const redraw = () => { drawMap(); drawRegister(); };
+  ["#f-domain","#f-tier","#f-eb","#f-flag"].forEach(s => $(s).addEventListener("change", redraw));
+  $("#f-q").addEventListener("input", redraw);
+  redraw();
+  document.addEventListener("click", e => { const el = e.target.closest("[data-code]"); if (el) openIndicator(el.dataset.code); });
+  $("#regtable").addEventListener("keydown", e => { if (e.key === "Enter") { const el = e.target.closest("[data-code]"); if (el) openIndicator(el.dataset.code); } });
+
+  // drawer
+  const dlg = $("#dlg");
+  $("#dlg-close").onclick = () => dlg.close();
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  const actionLi = a => `<li><div><span class="code">${esc(a.id)}</span> ${esc(a.text)}</div>
+     <div class="small" style="margin-top:4px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center">${badge(ST, a.status)}
+     <span>Lead: ${a.lead ? esc(a.lead) : `<b style="color:var(--critical-text)">none assigned</b>`}</span>
+     ${a.target_date ? `<span>Target ${fmtDate(a.target_date)}</span>` : ""}${a.last_updated ? `<span>Updated ${fmtDate(a.last_updated)}</span>` : ""}
+     ${a.progress != null ? `<span>${a.progress}%</span>` : ""}${a.focal ? `<span>Focal: ${esc(a.focal)}</span>` : ""}
+     ${a.evidence ? `<a href="${esc(a.evidence)}" target="_blank" rel="noopener">Evidence</a>` : ""}
+     ${a.flags.map(f => `<span class="chip hot">${esc(f)}</span>`).join("")}</div>${a.remarks ? `<div class="small" style="margin-top:4px">${esc(a.remarks)}</div>` : ""}</li>`;
+  function openIndicator(code) {
+    const x = IND[code]; if (!x) return;
+    $("#dlg-eyebrow").textContent = `${x.domain} · ${x.area} ${x.technical_area}`;
+    $("#dlg-title").textContent = `${x.code} ${x.name}`;
+    const own = x.actions.map(id => ACT[id]), sup = x.supporting.map(id => ACT[id]);
+    const recs = x.recs.map(id => REC[id]);
+    const checks = x.checks.map(id => CHK[id]);
+    $("#dlg-body").innerHTML = `
+      <div class="facts">
+        <div class="fact"><div class="k">JEE 2024</div><div class="v">${x.jee_2024} <span class="small">${SCORE_LABEL[x.jee_2024]}</span></div></div>
+        <div class="fact"><div class="k">Latest${x.latest_type && x.latest_type !== "JEE (external)" ? ` (${esc(x.latest_type)})` : ""}</div><div class="v">${x.latest} <span class="small">${SCORE_LABEL[x.latest]}</span></div></div>
+        <div class="fact" data-tip="${esc(x.target_basis)}" tabindex="0"><div class="k">2029 target</div><div class="v">${x.target} <span class="small">${SCORE_LABEL[x.target]}</span></div></div>
+        <div class="fact"><div class="k">Tier · priority</div><div class="v" style="font-size:15px;margin-top:4px">${badge(TIER, x.tier)} #${x.priority}</div></div>
+      </div>
+      <p class="small" style="margin:10px 0 0">Target basis: ${esc(x.target_basis || "—")}</p>
+      ${x.flags.length ? `<h4>Flags</h4><div class="chips">${x.flags.map(f => `<span class="chip hot">${esc(f)}</span>`).join("")}</div>` : ""}
+      <h4>JEE 2024 priority actions for this indicator (${recs.length})</h4>
+      ${recs.length ? `<ul class="plain">${recs.map(r => `<li>${badge(COV, r.naphs_coverage)} ${esc(r.recommendation)}
+          <div class="small" style="margin-top:4px">${r.naphs_action_ids ? "NAPHS: " + esc(r.naphs_action_ids.split(";").join(", ")) : "No matching NAPHS action"}${r.gap_note ? " · " + esc(r.gap_note) : ""}</div></li>`).join("")}</ul>`
+        : `<p class="small">The JEE report groups priority actions by technical area; none is tied specifically to this indicator. See the other indicators in ${esc(x.area)}.</p>`}
+      <h4>NAPHS strategic actions (${own.length})</h4>
+      ${own.length ? `<ul class="plain">${own.map(actionLi).join("")}</ul>` : `<p class="small" style="color:var(--critical-text)">The NAPHS draft has no strategic action under this indicator.</p>`}
+      ${sup.length ? `<h4>Actions under other indicators that also support it (${sup.length})</h4><ul class="plain">${sup.map(actionLi).join("")}</ul>` : ""}
+      ${checks.length ? `<h4>NAPHS draft alignment checks</h4><ul class="plain">${checks.map(c => `<li>${badge(SEV, c.severity)} <b>${esc(c.issue_type)}.</b> ${esc(c.finding)}<div class="small" style="margin-top:4px">Fix: ${esc(c.suggested_fix)}</div></li>`).join("")}</ul>` : ""}`;
+    dlg.showModal(); dlg.scrollTop = 0;
+  }
+
+  // coverage
+  $("#overarching").innerHTML = D.overarching.map(o => `<div class="ocard"><div>${badge(COV, o.naphs_coverage)}</div><h3>${esc(o.rec_id.replace("O", ""))}. ${esc(o.recommendation)}</h3>
+    <p>${esc(o.gap_note || "")}${o.naphs_action_ids ? `${o.gap_note ? " · " : ""}NAPHS: ${esc(o.naphs_action_ids.split(";").join(", "))}` : ""}</p></div>`).join("");
+  const stacked = (el, rows, levels, colors, labelFn, totFn) => {
+    $(el).innerHTML = rows.map(r => {
+      const tot = levels.reduce((s, l) => s + (r.v[l] || 0), 0);
+      const tipText = `<b>${esc(r.name)}</b><br>` + levels.filter(l => r.v[l]).map(l => `${l}: ${r.v[l]}`).join("<br>");
+      return `<div class="lab">${labelFn(r)}</div><div class="track" data-tip="${esc(tipText)}" tabindex="0" style="width:${r.scale * 100}%">${levels.filter(l => r.v[l]).map(l => `<span style="flex:${r.v[l]};background:${colors[l]}"></span>`).join("")}</div><div class="tot">${totFn(r, tot)}</div>`;
+    }).join("");
+  };
+  const covRows = D.areas.map(a => ({name: `${a.area} ${a.technical_area}`, area: a, v: a.coverage}));
+  const covMax = Math.max(...covRows.map(r => Object.values(r.v).reduce((s, n) => s + n, 0)));
+  covRows.forEach(r => r.scale = Object.values(r.v).reduce((s, n) => s + n, 0) / covMax);
+  stacked("#covbars", covRows, D.coverage_levels, Object.fromEntries(D.coverage_levels.map(c => [c, COV[c][2]])),
+    r => `${esc(r.area.area)} <span>${esc(r.area.technical_area)}</span>`, (r, t) => `${r.v["Not reflected"] ? `<b style="color:var(--critical-text)">${r.v["Not reflected"]}</b> / ` : ""}${t}`);
+  $("#covtable").innerHTML = `<table><thead><tr><th>Technical area</th>${D.coverage_levels.map(c => `<th class="num">${c}</th>`).join("")}</tr></thead><tbody>${covRows.map(r => `<tr><td>${esc(r.name)}</td>${D.coverage_levels.map(c => `<td class="num">${r.v[c] || 0}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+  const nr = D.recommendations.filter(r => r.naphs_coverage === "Not reflected");
+  $("#notreflected").innerHTML = nr.map(r => `<li><span class="code">${esc(r.indicators.split(";").join(", "))}</span> ${esc(r.recommendation)}${r.gap_note ? `<div class="small">${esc(r.gap_note)}</div>` : ""}</li>`).join("") || `<li class="empty">All JEE priority actions are at least partly reflected.</li>`;
+
+  // implementation
+  $("#implkpis").innerHTML = [
+    k("Strategic actions in the NAPHS", S.actions, (() => { const n = D.actions.filter(a => a.naphs_indicator !== a.indicator); return n.length ? `incl. ${n.length} under NAPHS-only rows ${[...new Set(n.map(a => a.naphs_indicator))].join(" and ")}` : "mapped to JEE indicators"; })()),
+    k("Status reported", `${S.actions_reported}`, `${Math.round(100 * S.actions_reported / S.actions)}% of actions`),
+    k("Completed", S.actions_completed, `${S.status["On track"]} on track · ${S.status["At risk"]} at risk · ${S.status["Delayed"]} delayed`),
+    k("Overdue", S.actions_overdue, "target date passed"),
+    k("Stale", S.actions_stale, `active, no update in ${C.stale_after_days} days`),
+    k("No lead authority", S.actions_no_lead, "owner to be named"),
+  ].join("");
+  const domRows = D.domains.map(d => { const v = {}; D.actions.forEach(a => { if (IND[a.indicator].domain === d) v[a.status] = (v[a.status] || 0) + 1; }); return {name: d, v}; });
+  const dmax = Math.max(...domRows.map(r => Object.values(r.v).reduce((s, n) => s + n, 0)));
+  domRows.forEach(r => r.scale = Object.values(r.v).reduce((s, n) => s + n, 0) / dmax);
+  stacked("#stbars", domRows, D.statuses, Object.fromEntries(D.statuses.map(s => [s, ST[s][2]])), r => esc(r.name), (r, t) => t);
+  $("#sttable").innerHTML = `<table><thead><tr><th>Domain</th>${D.statuses.map(s => `<th class="num">${s}</th>`).join("")}</tr></thead><tbody>${domRows.map(r => `<tr><td>${esc(r.name)}</td>${D.statuses.map(s => `<td class="num">${r.v[s] || 0}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+  const leads = D.leads.slice(0, 15), lmax = leads[0] ? leads[0].n : 1;
+  $("#leadbars").innerHTML = leads.map(l => `<div class="lab">${esc(l.lead)}</div><div class="track" data-tip="${esc(`<b>${l.lead}</b><br>${l.n} action(s)`)}" tabindex="0" style="width:${100 * l.n / lmax}%"><span style="flex:1;background:${l.lead.startsWith("(") ? "var(--critical)" : "var(--accent)"}"></span></div><div class="tot">${l.n}</div>`).join("");
+  $("#leadtable").innerHTML = `<table><thead><tr><th>Lead authority</th><th class="num">Actions</th></tr></thead><tbody>${D.leads.map(l => `<tr><td>${esc(l.lead)}</td><td class="num">${l.n}</td></tr>`).join("")}</tbody></table>`;
+  const attn = D.actions.filter(a => a.flags.length);
+  $("#attn tbody").innerHTML = attn.map(a => `<tr><td><span class="code">${esc(a.id)}</span> ${esc(a.text)}</td><td><a href="#" data-code="${esc(a.indicator)}" onclick="return false">${esc(a.indicator)}</a></td><td><div class="chips">${a.flags.map(f => `<span class="chip hot">${esc(f)}</span>`).join("")}</div></td><td class="small">${esc(a.lead) || "—"}</td><td>${badge(ST, a.status)}</td><td class="small">${fmtDate(a.target_date)}</td><td class="small">${fmtDate(a.last_updated)}</td></tr>`).join("") || `<tr><td colspan="7" class="empty">Nothing overdue, stale or unowned.</td></tr>`;
+  D.statuses.forEach(s => $("#a-status").insertAdjacentHTML("beforeend", `<option>${esc(s)}</option>`));
+  const drawAll = () => {
+    const s = $("#a-status").value, q = $("#a-q").value.trim().toLowerCase();
+    const rows = D.actions.filter(a => (!s || a.status === s) && (!q || (a.id + " " + a.text + " " + a.lead).toLowerCase().includes(q)));
+    $("#alltable tbody").innerHTML = rows.map(a => `<tr class="click" data-code="${esc(a.indicator)}"><td class="code">${esc(a.id)}</td><td>${esc(a.text)}</td><td class="small">${esc(a.lead) || `<b style="color:var(--critical-text)">none</b>`}</td><td>${badge(ST, a.status)}</td><td class="num">${a.progress ?? "—"}</td><td class="small">${fmtDate(a.target_date)}</td><td class="small">${fmtDate(a.last_updated)}</td></tr>`).join("");
+    $("#a-count").textContent = `${rows.length} of ${D.actions.length} actions`;
+  };
+  $("#a-status").onchange = drawAll; $("#a-q").oninput = drawAll; drawAll();
+
+  // checks
+  const sevOrder = {High: 0, Medium: 1, Low: 2};
+  $("#checktable tbody").innerHTML = [...D.checks].sort((a, b) => sevOrder[a.severity] - sevOrder[b.severity]).map(c => `<tr${c.indicator ? ` class="click" data-code="${esc(c.indicator)}"` : ""}><td class="code">${esc(c.check_id)}</td><td>${badge(SEV, c.severity)}</td><td class="code">${esc(c.indicator) || "—"}</td><td>${esc(c.issue_type)}</td><td>${esc(c.finding)}</td><td class="small">${esc(c.suggested_fix)}</td></tr>`).join("");
+
+  // sources and footer
+  $("#sources").innerHTML = C.sources.map(s => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>` : esc(s.label)}</li>`).join("");
+  const files = ["indicators","naphs_actions","jee_recommendations","overarching","naphs_alignment_checks","score_history"];
+  $("#csvlinks").innerHTML = files.map(f => `<a href="data/${f}.csv">${f}.csv</a>`).join(", ");
+  $("#foot").innerHTML = `${esc(C.prepared_by)}. JEE scores and priority actions: WHO, JEE mission report (2025); priority actions are paraphrased. NAPHS strategic actions: Strategic NAPHS 2026–2030, updated draft.`;
+  if (location.hash.startsWith("#ind=")) openIndicator(decodeURIComponent(location.hash.slice(5)));
+}
+})();
+</script>
+</body>
+</html>
